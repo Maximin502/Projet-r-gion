@@ -79,6 +79,8 @@ header {
     padding: 0.6rem 1.2rem;
     border-radius: 30px;
     transition: var(--transition);
+    display: block;
+    margin-top: 15px;
 }
 
 .menu a:hover,
@@ -294,15 +296,16 @@ footer p {
         gap: 1rem;
     }
 
-    .nav-links {
+    .menu {
         flex-wrap: wrap;
         justify-content: center;
         position: fixed;
         top: 100px;
-        left: 75%;
-        background-color: #00a896;
+        left: 77%;
+        background-color: hsl(180, 5%, 88%);
         padding:40px;
         border-radius: 30px;
+        height: 50vh;
     }
 
     .hero h1 {
@@ -313,7 +316,7 @@ footer p {
         grid-template-columns: 1fr;
     }
 
-    .nav-links{
+    .menu{
         display: none;
     }
 
@@ -321,7 +324,7 @@ footer p {
         display: block;
         font-size: 30px;
     }
-    #check:checked ~.nav-links{
+    #check:checked ~.menu{
         display: block;
     }
 }
