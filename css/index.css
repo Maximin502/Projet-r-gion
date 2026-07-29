@@ -1,23 +1,17 @@
-/* ==========================================
-   MAQUETTE 1 : STYLE EMERAUDE & LAGON
-   ========================================== */
-
-/* 1. IMPORTS & PALETTE DE COULEURS */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 :root {
-    --primary-color: #028090;      /* Bleu Lagon */
-    --secondary-color: #00a896;    /* Vert Émeraude */
-    --accent-color: #f0a500;       /* Jaune Soleil */
-    --bg-color: #f4f7f6;           /* Fond Clair */
-    --card-bg: #ffffff;            /* Fond Carte */
-    --text-color: #2b2d42;         /* Texte Principal */
-    --text-muted: #6c757d;        /* Texte Secondaire */
+    --primary-color: #028090;
+    --secondary-color: #00a896;
+    --accent-color: #f0a500;
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --text-color: #2b2d42;
+    --text-muted: #6c757d;
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* 2. REINITIALISATION */
 * {
     margin: 0;
     padding: 0;
@@ -40,9 +34,8 @@ img {
     display: block;
 }
 
-/* 3. EN-TÊTE ET NAVIGATION */
 header {
-    background-color: #ffffff;
+    background-color:  rgba(247, 239, 239, 0.58);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -73,13 +66,13 @@ header {
 .btn-check{
     display: none;
 }
-.nav-links {
+.menu {
     display: flex;
     list-style: none;
     gap: 1.2rem;
 }
 
-.nav-links a {
+.menu a {
     color: var(--text-color);
     text-decoration: none;
     font-weight: 500;
@@ -88,19 +81,85 @@ header {
     transition: var(--transition);
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+.menu a:hover,
+.menu a.active {
     background-color: var(--primary-color);
     color: #ffffff;
 }
 
-/* 4. CONTENU PRINCIPAL */
 main {
     flex: 1;
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     padding: 2.5rem 1.5rem;
+}
+
+.hero {
+    background-image: url('../img projet/Toliara.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: hwb(60 100% 0%);
+    text-align: center;
+    padding: 0 1.5rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    margin-bottom: 3rem;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: hsl(234, 100%, 52%);
+    margin-bottom: 1rem;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    max-width: 650px;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    padding: 0.9rem 2.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(240, 165, 0, 0.3);
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background-color: #d99300;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(240, 165, 0, 0.4);
+}
+
+.content-block {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--secondary-color);
+}
+
+.content-block h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
 }
 
 .title-container {
@@ -128,59 +187,7 @@ main {
     border-radius: 2px;
 }
 
-/* Hero Banner (Accueil) */
-.hero {
-    background-image: url('./734067613_2341162230025533_4254366376682574201_n.jpg');
-    height: 75vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    text-align: center;
-    padding: 0 1.5rem;
-    border-radius: 20px;
-    box-shadow: var(--shadow);
-    margin-bottom: 3rem;
-}
 
-.hero h1 {
-    font-size: 3.2rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.hero p {
-    font-size: 1.3rem;
-    max-width: 650px;
-    margin-bottom: 2rem;
-    font-weight: 300;
-}
-
-/* Boutons Stylisés */
-.btn {
-    display: inline-block;
-    background-color: var(--accent-color);
-    color: #ffffff;
-    padding: 0.9rem 2.2rem;
-    font-size: 1rem;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(240, 165, 0, 0.3);
-    transition: var(--transition);
-}
-
-.btn:hover {
-    background-color: #d99300;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(240, 165, 0, 0.4);
-}
-
-/* Grilles & Cartes (Tourisme & Gastronomie) */
 .grid-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -229,22 +236,6 @@ main {
     font-size: 0.95rem;
 }
 
-/* Blocks de contenu (Histoire) */
-.content-block {
-    background: var(--card-bg);
-    padding: 2.5rem;
-    border-radius: 16px;
-    margin-bottom: 2rem;
-    box-shadow: var(--shadow);
-    border-left: 5px solid var(--secondary-color);
-}
-
-.content-block h2 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-/* Formulaire de Contact */
 .contact-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -285,7 +276,6 @@ main {
     background-color: #ffffff;
 }
 
-/* 5. PIED DE PAGE */
 footer {
     background-color: var(--primary-color);
     color: #ffffff;
@@ -299,7 +289,6 @@ footer p {
     opacity: 0.9;
 }
 
-/* 6. RESPONSIVE DESIGN */
 @media (max-width: 1124px) {
     .navbar {
         gap: 1rem;
