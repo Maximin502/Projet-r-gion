@@ -290,41 +290,40 @@ footer p {
     font-size: 0.95rem;
     opacity: 0.9;
 }
+ @media (max-width:1124px){
 
-@media (max-width: 1124px) {
-    .navbar {
-        gap: 1rem;
-    }
-
-    .menu {
-        flex-wrap: wrap;
-        justify-content: center;
+    .btn-check{
         position: fixed;
-        top: 100px;
-        left: 77%;
-        background-color: hsl(180, 5%, 88%);
-        padding:40px;
-        border-radius: 30px;
-        height: 50vh;
-    }
-
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-
-    .contact-container {
-        grid-template-columns: 1fr;
+        right: 20px;
+        top: 20px;
+        display:block;
+        font-size:30px;
+        cursor:pointer;
+        z-index:1001;
     }
 
     .menu{
-        display: none;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        gap:20px;
+
+        position:fixed;
+        top:0;
+        right:-100%;
+
+        width:280px;
+        height:100vh;
+
+        background:#eceeee;
+        border-radius:20px 0 0 20px;
+
+        transition:.4s;
+        z-index:999;
     }
 
-    .btn-check{
-        display: block;
-        font-size: 30px;
-    }
-    #check:checked ~.menu{
-        display: block;
+    #check:checked ~ .menu{
+        right:0;
     }
 }
