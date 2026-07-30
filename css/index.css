@@ -290,6 +290,9 @@ footer p {
     font-size: 0.95rem;
     opacity: 0.9;
 }
+li{
+    text-decoration: none;
+}
  @media (max-width:1124px){
 
     .btn-check{
