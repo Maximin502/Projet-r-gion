@@ -291,7 +291,11 @@ footer p {
     opacity: 0.9;
 }
 li{
+    list-style: none;
+}
+li a{
     text-decoration: none;
+    color: var(--text-color);
 }
  @media (max-width:1124px){
 
@@ -329,4 +333,15 @@ li{
     #check:checked ~ .menu{
         right:0;
     }
+    
+    .contact-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        background: var(--card-bg);
+        padding: 3rem;
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+    }
+
 }
